@@ -1,3 +1,13 @@
+/*
+http://www.JSON.org/json2.js
+2011-02-23
+
+Public Domain.
+
+NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+
+See http://www.JSON.org/js.html
+*/
 window.addEventListener('DOMContentLoaded', () => {
   const cardsLayer = document.querySelector('.cards');
   // Получаем данные
