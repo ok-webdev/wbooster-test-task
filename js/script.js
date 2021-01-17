@@ -5,9 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
     await fetch('../assets/data/goods.JSON').then(response => {
       return response.json();
     }).then(data => {
-      let products = data;
       // Генерируем карточки
-      products.product.forEach((item, i) => {
+      data.product.forEach((item, i) => {
         let newCard = document.createElement('DIV');
         
         newCard.classList.add('card');
