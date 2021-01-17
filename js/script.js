@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', () => {
   const cardsLayer = document.querySelector('.cards');
   // Получаем данные
