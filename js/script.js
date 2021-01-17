@@ -1,11 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
   const cardsLayer = document.querySelector('.cards');
-  
+  // Получаем данные
   async function generateCards () {
     await fetch('../assets/data/goods.JSON').then(response => {
       return response.json();
     }).then(data => {
       let products = data;
+      // Генерируем карточки
       products.product.forEach((item, i) => {
         let newCard = document.createElement('DIV');
         
@@ -23,13 +24,14 @@ window.addEventListener('DOMContentLoaded', () => {
         cardsLayer.appendChild(newCard);
       });
     });
-
+    // Получаем элементы со страницы
     const cardBtns = document.querySelectorAll('.btn_card'),
           overlay = document.querySelector('.overlay'),
           modal = overlay.querySelector('.modal'),
           modalForm = modal.querySelector('form'),
           close = modal.querySelector('.modal__close');
 
+      // Показываем/прячем модальное окно по кнопке закрытия, клику мимо формы, после отправки формы
       function showModal () {
         overlay.style.display = 'block';
       }
