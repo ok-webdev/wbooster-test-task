@@ -1,6 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', () => {
-  const cardsLayer = document.querySelector('.cards');
+  const DATA = '../assets/data/goods.JSON',
+        cardsLayer = document.querySelector('.cards');
   // Получаем данные
   async function generateCards () {
     await fetch('https://raw.githubusercontent.com/ok-webdev/wbooster-test-task/main/assets/data/goods.JSON').then(response => {
